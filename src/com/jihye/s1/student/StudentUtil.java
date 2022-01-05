@@ -10,7 +10,7 @@ public class StudentUtil {
 		// 배열
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("숫자를 입력해주세요");
+		System.out.println("학생수를 입력하세요");
 		int count = sc.nextInt();
 		Student [] students = new Student[count];
 		
