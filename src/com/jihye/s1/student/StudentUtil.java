@@ -3,41 +3,59 @@ package com.jihye.s1.student;
 import java.util.Scanner;
 
 public class StudentUtil {
-	//학생 객체를 생성하고 정보를 입력 받는 곳
-	public Student[] makeStudents() {
-		// 학생의 수를 입력 받음
-		// 키보드로부터 이름,번호,국어 영어 수학 입력
-		// 학생들의 정보 입력
-		// 배열
+	// 학생 객체를 생성하고 정보를 입력 받는 곳
+	public Student search(Student[] students) {
+		// 검색할학생의 수를 입력 받음
+		// 입력받은 번호와 일치하는 학생을 찾아서 출력
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("학생수를 입력하세요");
+		System.out.println("학생번호를 입력하세요");
+		int num = sc.nextInt();
+		Student student = null;
+
+		for (int i = 0; i < students.length; i++) {
+			if (students[i].number == num) {
+				System.out.println("Find");
+//				sv.viewStudents(students)
+				student = students[i];
+				break;
+			}else {
+				System.out.println("학생을 찾을 수 없습니다");
+				break;
+			}
+		}
+		return student;
+
+		// 학생들의 정보를 리턴, 리턴을 만나는 즉시 종료라서 for문이 끝나고 넣어야함
+
+	}
+
+	public Student []  makeStudents() {
+		Scanner sc = new Scanner(System.in);
+		//학생의 수를 입력 받음
+		System.out.println("학생 수 입력");
 		int count = sc.nextInt();
 		Student [] students = new Student[count];
 		
-		for (int i = 0; i < students.length; i++) {
+		for(int i=0;i<students.length;i++) {
 			Student student = new Student();
-			
-			
-			System.out.println("학생이름");
+			//키보드로 부터 이름, 번호, 국어 영어 수학 입력
+			System.out.println("이름 입력");
 			student.name = sc.next();
-
-			System.out.println("학생번호");
+			System.out.println("번호 입력");
 			student.number = sc.nextInt();
-
-			System.out.println("국어점수");
+			System.out.println("국어 입력");
 			student.kor = sc.nextInt();
-
-			System.out.println("영어점수");
+			System.out.println("영어 입력");
 			student.eng = sc.nextInt();
-
-			System.out.println("수학점수");
+			System.out.println("수학 입력");
 			student.math = sc.nextInt();
-			students[i] = student;
+			students[i]=student;
 		}
-		//학생들의 정보를 리턴, 리턴을 만나는 즉시 종료라서 for문이 끝나고 넣어야함
+		
+		//학생들의 정보를 리턴
 		return students;
-	}
+}
 }
 //	public Student makeStudent() {
 //		//키보드로부터 이름,번호,국어 영어 수학 리턴 -> 이거를 하나로 입력 받아

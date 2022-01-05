@@ -3,29 +3,13 @@ package com.jihye.s1.student;
 public class StudentMain {
 
 	public static void main(String[] args) {
-		StudentView sv = new StudentView();
+		StudentController sc = new StudentController();
+		sc.start();
 		
-		Student [] students=new Student[2];
-		
-		Student student = new Student();
-		student.name= "다";
-		student.number= 7;
-		student.kor= 10;
-		student.eng= 10;
-		student.math= 11;
-		students[0]=student;
-		
-		student = new Student();
-		
-		student.name= "이";
-		student.number= 10;
-		student.kor= 7;
-		student.eng= 12;
-		student.math= 10;
-		students[1]=student;
-		
-		
+		System.out.println("종료");
+
 	}
+	
 	
 }
 

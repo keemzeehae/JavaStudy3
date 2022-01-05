@@ -13,6 +13,14 @@ public class StudentView {
 			System.out.println("수학: " + student.math);
 		}
 	}
+	public void viewMessage(String message) {
+			
+			System.out.println("=============================");
+			System.out.println(message);
+			System.out.println("=============================");
+			
+		}
+	}
 //	//viewStudent -학생의 모든 정보를 출력
 //	public void viewStudent(Student student) {
 //
@@ -32,4 +40,4 @@ public class StudentView {
 //		
 //	}
 
-}
+
