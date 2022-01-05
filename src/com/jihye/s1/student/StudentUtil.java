@@ -3,6 +3,7 @@ package com.jihye.s1.student;
 import java.util.Scanner;
 
 public class StudentUtil {
+	//학생 객체를 생성하고 정보를 입력 받는 곳
 	public Student[] makeStudents() {
 		// 학생의 수를 입력 받음
 		// 키보드로부터 이름,번호,국어 영어 수학 입력
