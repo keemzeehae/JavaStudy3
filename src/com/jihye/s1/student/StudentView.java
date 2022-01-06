@@ -4,6 +4,7 @@ public class StudentView {
 	//출력전용 
 	//viewStudents - 여러명의 학생의 모든 정보를 출력
 	public void viewStudents(Student [] students) {
+		//overloading으로 위아래 메서드 view라고 하나로 설정해놓고 사용해도 된다
 		for (int i = 0; i < students.length; i++) {
 			//Student student = students[i];
 			//this.viewStudent(student);

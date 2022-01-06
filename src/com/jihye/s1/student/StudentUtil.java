@@ -6,6 +6,9 @@ public class StudentUtil {
 	// 학생 객체를 생성하고 정보를 입력 받는 곳
 
 	Scanner sc;
+	public StudentUtil() {
+		this.sc = new Scanner (System.in);
+	}
 
 	public void initUtil() {
 		this.sc = new Scanner(System.in);
