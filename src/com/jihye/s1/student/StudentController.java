@@ -9,7 +9,7 @@ public class StudentController {
 		Scanner sc = new Scanner(System.in);
 		boolean button = true;
 		StudentUtil su = new StudentUtil();
-		su.initUtil();
+		//su.initUtil();
 		StudentView sv = new StudentView();
 		Student [] students =null;
 
@@ -28,29 +28,28 @@ public class StudentController {
 
 			case 2:
 				if (students != null) {
-				sv.viewStudents(students);
+				sv.view(students);
 				}else {
-					sv.viewMessage("학생정보를 먼저 입력하세요");
+					sv.view("학생정보를 먼저 입력하세요");
 				}
 				break;
 				
 			case 3:
 				if (students ==null) {
-					sv.viewMessage("학생정보가 없습니다");
+					sv.view("학생정보가 없습니다");
 					continue;
 				}
 				System.out.println("학생정보를 검색합니다.");
 				Student student= su.search(students);
 				if(student!= null) {
-					sv.viewStudents(students);
+					sv.view(student);
 				}else {
-					sv.viewMessage("검색결과가 없습니다.");
+					sv.view("검색결과가 없습니다.");
 				}
 				break;
 
 			default:
-				System.out.println("종료");
-				System.out.println("프로그램을 종료합니다");
+	
 				button = false;
 				break;
 			}

@@ -16,20 +16,19 @@ public class StudentUtil {
 
 	public Student search(Student[] students) {
 		// 검색할학생의 수를 입력 받음
-		// 입력받은 번호와 일치하는 학생을 찾아서 출력
+		// 입력받은 번호와 일치하는 학생을 찾아서 리턴
 		System.out.println("학생번호를 입력하세요");
 		int num = sc.nextInt();
+		
 		Student student = null;
 
 		for (int i = 0; i < students.length; i++) {
 			if (students[i].number == num) {
 				System.out.println("Find");
 //				sv.viewStudents(students)
-				student = students[i];
+				student=students[i] ;
 				break;
-			} else {
-				System.out.println("학생을 찾을 수 없습니다");
-				break;
+			
 			}
 		}
 		return student;

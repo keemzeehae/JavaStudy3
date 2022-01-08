@@ -5,14 +5,15 @@ public class StudentMain {
 	public static void main(String[] args) {
 		StudentController sc = new StudentController();
 		sc.start();
-		Student student = new Student();
-		student.name = "suzy";
-		student.kor=10;
-		student.math=10;
-		student.eng=10;
 		
+//		Student student = new Student();
+//		student.name = "suzy";
+//		student.kor=10;
+//		student.math=10;
+//		student.eng=10;
+//		
 //		student.hello();
-		student.makeTotal();
+//		student.makeTotal();
 //		System.out.println("참조변수 student: "+student);
 //		System.out.println("Student Total: "+student.total);
 //		
